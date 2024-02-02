@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-bottom: 1px solid black;
+            width: 100%;
+        }
+        table td h1 a{
+           text-decoration: none;
+        }
+    </style>
+</head>
+<body style="background-image:url('https://i.pinimg.com/236x/67/39/c5/6739c51ccaab206326008e5c1fc1d3c5.jpg')">
+    <div class="container">
+        <div class="row">
+    <h6>   <a href="{% url 'seller:logout' %}">LogOut</a></h6>
+
+    <table>
+        <tr>
+            <td><h1><a href="{% url 'seller:addpdt' %}">Add Product</a></h1></td>
+            
+            <td><h1><a href="{% url 'seller:viewpdt' %}">View Products</a></h1></td>
+
+            <td><h1><a href="{% url 'seller:category' %}">Add cat</a></h1></td>
+            
+            <td><h1><a href="{% url 'seller:viewcat' %}">View cat</a></h1></td>
+
+           
+        </tr>
+    </table>
+</body>
+</html>

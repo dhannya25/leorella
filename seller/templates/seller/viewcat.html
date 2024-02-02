@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body  style="background-image:url('https://i.pinimg.com/236x/20/a6/05/20a605e9ded3df20f2e067375ed7b46b.jpg')">
+    <div class="container">
+        <div class="row">
+    <h2>   <a href="{% url 'customer:logout' %}">LogOut</a></h2>
+
+    <table>
+        <h1>category</h1>
+        <tr>
+            <td>name</td>
+            <td>description</td>
+            <td>image</td>
+        </tr>
+        {% for i in category %}
+        <tr>
+            <td>{{i.c_name}}</td>
+            <td>{{i.c_description}}</td>
+            <td><img src="{{i.c_image.url}}" alt="" width="100px"></td>
+            <td><a href="{% url 'seller:updatecat' i.id %}">update</a></td>
+            <td><a href="{% url 'seller:deletecat' i.id %}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

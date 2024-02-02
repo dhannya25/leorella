@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>   <a href="{% url 'customer:logout' %}">LogOut</a></h2>
+
+    <h1>category</h1>
+    <form action="" onsubmit="return po()" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <label for="">category Name</label>
+        <input type="text" name="name" id=""> <br><br>
+        <label for="">category image</label>
+        <input type="file" name="image" id=""><br>
+        <label for="">category Description</label>
+        <input type="text" name="description" id="description">
+        <p id="pa" style="color: brown;"></p>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
